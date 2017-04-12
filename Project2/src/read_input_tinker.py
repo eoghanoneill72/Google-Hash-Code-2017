@@ -12,6 +12,7 @@ def read_google(filename):
         number_of_caches = int(number_of_caches)
         cache_size = int(cache_size)
         video_ed_request = dict()
+        ##create a list of the video sizes from line 2
         video_size_desc = next(fin).strip().split(" ")
         for i in range(len(video_size_desc)):
             video_size_desc[i] = int(video_size_desc[i])
@@ -75,3 +76,8 @@ for i in data["video_ed_request"]:
     sum += int(data["video_ed_request"][i])
 print("number of individual requests=", sum, " which is different from the number of request descriptions ", data["number_of_requests"])
 
+        
+
+for key in data:
+    print (key, '-->', data[key])
+print("video_ed_request[(video_id,ed_id)] = requests")
