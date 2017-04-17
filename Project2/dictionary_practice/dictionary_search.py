@@ -29,7 +29,7 @@ word_counts = dictionary.values()
 print('Word count for "the":', dictionary.get('the'))
 
 # Rank by frequency
-# Convert into a data structure that will gauranntee that the order of the elements will be maintained.
+# Convert into a data structure that will guarantee that the order of the elements will be maintained.
 to_array = []
 # Note how we iterate through the key AND the corresponding value
 for k, v in dictionary.items():
@@ -37,7 +37,7 @@ for k, v in dictionary.items():
 
 def sorted_dict_alt(array):
     # Look familiar? bubble sort! (Slightly modified), you can use any sorting algorithm
-    for i in range(len(to_array)):
+    for _ in range(len(to_array)):
         for current in range(len(to_array)-1):
             if array[current][1] < array[current+1][1]:
                 temp = to_array[current]
